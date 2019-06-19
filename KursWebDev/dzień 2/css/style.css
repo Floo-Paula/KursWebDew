@@ -1,0 +1,27 @@
+.red {
+    background-color: rgb(255, 0, 0);
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.blue {
+    background-color: #00f;
+    height: 20vh;
+    margin-top: 100px;
+}
+
+body {
+    color: white;
+}
+
+body > div > p {
+    font-size: 2rem;
+}
+
+div + div > p {
+    font-size: 1.5rem;
+}
+
+html {
+    font-family: arial;
+}
