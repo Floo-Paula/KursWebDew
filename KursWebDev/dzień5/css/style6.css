@@ -4,7 +4,47 @@
 }
 
 /* NAWIGACJA*/
+nav {
+    font-size: 0;
+}
 
+nav a {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 25%;
+    height: 50px;
+    font-size: 18px;
+    font-family: Arial;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: grey;
+    line-height: 50px;
+}
+
+nav a.btn1 {
+    background-color: orange;
+}
+
+nav a.btn2 {
+    background-color: skyblue;
+}
+
+nav a.btn3 {
+    background-color: darkcyan;
+}
+
+nav a.btn4 {
+    background-color: royalblue;
+}
+
+nav a:hover {
+    border-bottom: 4px solid black;
+    color: black;
+    background-color: grey;
+
+}
 
 /*HEADER*/
 header {

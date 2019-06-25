@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* NAWIGACJA*/
+nav {
+    margin: 30px auto;
+    text-align: right;
+    max-width: 1440px;
+}
+
+nav a {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #555;
+    padding: 10px;
+    margin: 0 20px;
+
+}
+
+nav a.reservation {
+    border: 2px solid #555;
+    padding: 10px 30px;
+    margin-right: 50px;
+    margin-left: 80px;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #555;
+    color: #000;
+}
+
+nav a.reservation:hover {
+    background-color: royalblue;
+    color: #eee;
+    border-color: royalblue;
+}
+
+/* HEADER */
+header {
+    height: 40vh;
+    background-image: url(../img/car-repair.jpg);
+    background-size: cover;
+
+}
+
+header h1 {
+    font-size: 6rem;
+    color: white;
+    text-align: center;
+    line-height: 40vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* MAIN*/
+main {
+    max-width: 1440px;
+    margin: 5vh auto;
+    font-size: 0;
+}
+
+main p.description {
+    font-size: 22px;
+    text-align: center;
+    margin: 0 30px 50px 30px;
+    line-height: 180%;
+}
+
+main section.features {
+    background-color: #eee;
+    padding: 20px 0;
+}
+
+main div.feature {
+    display: inline-block;
+    width: 33.33%;
+}
+
+main div.image {
+    height: 200px;
+    background-color: royalblue;
+    margin: 20px;
+}
+
+main h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #222;
+}
+
+main div.image:hover {
+    background-color: aquamarine;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #000;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+}
