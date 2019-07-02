@@ -1,0 +1,20 @@
+div.menu_ico {
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    cursor: pointer;
+}
+
+i.fa-bars {
+    font-size: 40px;
+    color: grey;
+}
+
+html {
+    min-height: 200vh;
+}
+
+
+div.menu_ico:hover .fa-bars {
+    color: black
+}
