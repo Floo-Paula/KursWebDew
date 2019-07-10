@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Domek</title>
+    <style>
+        span {
+            margin: 50px 0 0 50px;
+            display: block;
+            width: 120px;
+            height: 50px;
+            background-color: brown;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        div {
+            position:absolute;
+            left: 0;
+            top: 100vh;
+            height: 0px;
+            width: 0px;
+            transition: 2s 0.3s;
+        }
+        div:nth-of-type(2) {
+            transition-delay: 0.5s;
+        }
+        div:nth-of-type(3) {
+            transition-delay: 0.6s;
+        }
+        div:nth-of-type(4) {
+            transition-delay: 0.7s;
+        }
+        div:nth-of-type(5) {
+            transition-delay: 0.9s;
+        }
+        div:nth-of-type(6) {
+            transition-delay: 1s;
+        }
+
+        span:hover ~ div:first-of-type {
+            height: 150px;
+            width: 200px;
+            top: 50%;
+            left: 50%;
+            background-color: brown;
+            transform: translate(-50%, -50%);
+            }
+
+        span:hover ~ div:nth-of-type(2) {
+            height: calc(200px/1.41);
+            width: calc(200px/1.41);
+            top: calc(50% - 75px);
+            left: 50%;
+            background-color: black;
+            transform: translate(-50%,-50%) rotate(45deg);
+            z-index: -1;
+            }
+            span:hover ~ div:nth-of-type(3) {
+            height: 40px;
+            width: 40px;
+            top: 50%;
+            left: 50%;
+            background-color: yellow;
+            transform: translate(30px, -50px);
+            }
+            span:hover ~ div:nth-of-type(4) {
+            height: 40px;
+            width: 40px;
+            top: 50%;
+            left: 50%;
+            background-color: yellow;
+            transform: translate(-70px, -50px);
+            }
+            span:hover ~ div:nth-of-type(5) {
+            height: 80px;
+            width: 40px;
+            top: 50%;
+            left: 50%;
+            background-color: grey;
+            transform: translate(-20px, -5px);
+            }
+            span:hover ~ div:last-of-type {
+            height: 30px;
+            width: 30px;
+            top: 50%;
+            left: 50%;
+            background-color: black;
+            transform: translate( 40px, -135px);
+            }
+    </style>
+
+</head>
+
+<body>
+    <span>BUDUJEMY</span>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>
