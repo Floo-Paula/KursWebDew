@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zachód Słońca</title>
+
+    <style>
+        body {
+            background-color: #444;
+            animation: sky 5s infinite linear ;
+        }
+        .sun {
+            position: fixed;
+            bottom: 15%;
+            left: 10%;
+            width: 15vw;
+            height: 15vw;
+            background-color: brown;
+            border-radius: 50%;
+            animation: sun 5s infinite linear;
+        }
+        .grass {
+            position:fixed;
+            left: 0;
+            right: 0;
+            bottom:0;
+            height: 30vh;
+            background-color: #222;
+            animation: grass 5s infinite linear;
+        }
+
+        @keyframes sky {
+            /* 0% 
+            {background-color: #444;
+
+            } */
+            20% {
+                background-color: rgb(183, 115, 190);
+            }
+            50% {
+                background-color: lightblue;
+            }
+            80% {
+                background-color: rgb(183, 115, 190);
+            }
+            /* 100% 
+            {background-color: #444;
+            } */
+        }
+        @keyframes grass {
+            /* 0% {
+                background-color: #222;
+            } */
+            20% {
+                background-color: rgb(177, 228, 119);
+            }50% {
+                background-color: rgb(38, 184, 46);
+            }80% {
+                background-color: rgb(177, 228, 119);
+            /* }100% {
+                background-color: #222;
+            } */
+            }
+        }
+        @keyframes sun {
+            /* 0% {
+                background-color: brown;
+                bottom: 15%;
+            left: 10%;
+            } */
+            50% {
+                background-color: rgb(236, 208, 45);
+                bottom: 50%;
+            }
+            100% {
+                /* background-color: brown;
+                bottom: 15%; */
+            left: 90%;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="sun"></div>
+    <div class="grass"></div>
+</body>
+</html>
