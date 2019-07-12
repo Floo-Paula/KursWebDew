@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Napis animacja</title>
+    <script src="https://kit.fontawesome.com/95f45dfde1.js"></script>
+    <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    button.arrow  {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 50px;
+        background-color: rgb(59, 139, 230);
+        border-radius: 50%;
+        border: 0;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.2s;
+        color: white;
+        font-size: 40px;
+    }
+    button:hover {
+       transform:scale(1.2) translateX(-40%);
+        
+    }
+    button i {
+        transform: translateY(-50%);
+        text-shadow: 0 -15px 0 white, 0 -30px 0 white;
+        animation: arrowMove 3s linear infinite;
+    }
+    @keyframes arrowMove {
+100% {
+    transform: translateY(92px);
+}
+    }
+    </style>
+</head>
+<body>
+    <button class="arrow">
+        <i class="fas fa-angle-down"></i>
+    </button>
+    
+</body>
+</html>

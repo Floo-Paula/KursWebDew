@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>gra pong</title>
+
+  <style>
+    html {
+      /* stół */
+      --tableWidth: 700px;
+      --tableHeight: 400px;
+      --tableColor: #333;
+      /* rakietka */
+      --paddleWidth: 25px;
+      --paddleHeight: 80px;
+      --paddleColor: yellow;
+      /* piłka */
+      --ballSize: 20px;
+      --ballColor: white;
+      /* pozycja */
+      --paddleFromEdge: 50px;
+      /* czas animacji */
+      --animationTime: 5s;
+    }
+
+    .table,
+    .ball,
+    .paddle,
+    .result {
+      position: absolute;
+    }
+
+    .table {
+      width: var(--tableWidth);
+      height: var(--tableHeight);
+      background-color: var(--tableColor);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .ball {
+      width: var(--ballSize);
+      height: var(--ballSize);
+      top: calc(50% - var(--ballSize)/2);
+      left: calc(50% - var(--ballSize)/2);
+      background-color: var(--ballColor);
+      border-radius: 50%;
+      animation: ballMove var(--animationTime) linear both;
+
+    }
+
+    .paddle {
+      width: var(--paddleWidth);
+      height: var(--paddleHeight);
+      background-color: var(--paddleColor);
+    }
+
+    .player {
+      top: calc(50% - var(--paddleHeight)/2);
+
+      left: var(--paddleFromEdge);
+      animation: playerPaddle var(--animationTime) linear both;
+    }
+
+    .ai {
+      top: calc(50% - var(--paddleHeight)/2);
+      right: var(--paddleFromEdge);
+      animation: aiPaddle var(--animationTime) linear both;
+    }
+
+    .result {
+
+      width: 100%;
+      left: 0;
+      top: 10%;
+      text-transform: uppercase;
+      text-align: center;
+      font-family: sans-serif;
+
+      color: black;
+      transform: scale(0);
+      animation: showResult 1s calc(var(--animationTime) + 1s) both;
+    }
+
+
+    @keyframes ballMove {
+      20% {
+        top: calc(var(--tableHeight) - 60px);
+        left: calc(var(--tableWidth) - var(--paddleFromEdge) - var(--paddleWidth) - var(--ballSize));
+      }
+
+      34% {
+        top: calc(var(--tableHeight) - var(--ballSize));
+        left: calc(var(--tableWidth) - 300px);
+      }
+
+      58% {
+        top: 100px;
+        left: calc(var(--paddleFromEdge) + var(--paddleWidth));
+      }
+
+      84% {
+        top: 0;
+        left: calc(var(--tableWidth)/3*2);
+      }
+
+      100% {
+        top: calc(var(--tableHeight)/5);
+        left: var(--tableWidth);
+      }
+
+    }
+
+    @keyframes playerPaddle {
+      20% {
+        top: calc(var(--tableHeight)/5*3);
+      }
+
+      34% {
+        top: calc(var(--tableHeight) - var(--paddleHeight) - var(--ballSize));
+      }
+
+      58% {
+        top: calc(var(--tableHeight)/5);
+      }
+
+      84% {
+        top: calc(var(--tableHeight)/9);
+      }
+
+      100% {
+        top: calc(var(--tableHeight)/9);
+      }
+    }
+
+    @keyframes aiPaddle {
+      20% {
+        top: calc(var(--tableHeight) - var(--paddleHeight) - 55px);
+      }
+
+      34% {
+        top: calc(var(--tableHeight) - var(--paddleHeight));
+      }
+
+      58% {
+        top: calc(var(--tableHeight)/3*2);
+      }
+
+      84% {
+        top: calc(var(--tableHeight)/3);
+      }
+
+      100% {
+        top: calc(var(--tableHeight)/5);
+      }
+    }
+
+    @keyframes showResult {
+      0% {
+        transform: scale(0);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="table">
+    <div class="ball"></div>
+    <div class="paddle player"></div>
+    <div class="paddle ai"></div>
+  </div>
+  <h1 class="result">wygrałeś!</h1>
+</body>
+
+</html>

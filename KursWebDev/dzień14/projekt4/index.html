@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dzwonek</title>
+    <script src="https://kit.fontawesome.com/95f45dfde1.js"></script>
+    <style>
+        .bell {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            width: 80px;
+            height: 80px;
+            border: 6px solid cadetblue;
+            border-radius: 50%;
+            font-size: 50px;
+            color: cadetblue;
+            text-align: center;
+            line-height: 80px;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .bell i {
+            animation: move 0.3s linear infinite alternate;
+            transform-origin: 50% 0%;
+            transition: 0.2s;
+        }
+
+        .bell:hover i {
+            color: white;
+            animation-duration: 0.15s;
+            /* animation-play-state: paused; */
+            /* animation: none; */
+        }
+
+        .bell:hover {
+            background-color: cadetblue;
+        }
+
+        @keyframes move {
+            0% {
+                transform: rotate(30deg);
+            }
+
+            100% {
+                transform: rotate(-30deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bell">
+        <i class="fas fa-bell"></i>
+    </div>
+</body>
+
+</html>
