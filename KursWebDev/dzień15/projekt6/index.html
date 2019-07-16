@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Layout</title>
+    <style>
+        body {
+            display: grid;
+            min-height: 100vh;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            grid-template-columns: 1fr 300px;
+            grid-template-rows: 300px 50px 1fr 50px;
+            grid-template-areas:
+                'baner baner'
+                'menu menu'
+                'blog column'
+                'stopka stopka';
+            color: white;
+            font-size: 40px;
+            font-family: Arial;
+        }
+
+        header {
+            grid-area: baner;
+            background-color: aqua;
+        }
+
+        nav {
+            grid-area: menu;
+            background-color: coral;
+        }
+
+        main {
+            grid-area: blog;
+            background-color: rgb(42, 128, 61);
+        }
+
+        aside {
+            grid-area: column;
+            background-color: rgb(168, 155, 150);
+        }
+
+        footer {
+            grid-area: stopka;
+            background-color: rgb(173, 147, 221);
+        }
+
+        @media (max-width: 1024px) {
+            body {
+                grid-template-columns: 1fr;
+                grid-template-rows: 50px 300px 2fr 1fr 50px;
+                grid-template-areas:
+                    'menu'
+                    'baner'
+                    'blog'
+                    'column'
+                    'stopka';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Header</header>
+    <nav>Nav</nav>
+    <main>Main</main>
+    <aside>Aside</aside>
+    <footer>Stopka</footer>
+
+</body>
+
+</html>
