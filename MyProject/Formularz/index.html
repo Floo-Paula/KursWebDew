@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularz budowlany</title>
+    <!--  Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Saira:400,600,800&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <!--  Custom Styles  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Kontakt</h1>
+            <p>Jeżeli jesteś zainteresowany budową inwestycji i chciałbyś otrzymać wycenę od naszej firmy,
+                wypełnij formularz i prześlij nam swój projekt. Nasz doradca skontaktuje się z Tobą w celu
+                omówienia wykonanej dla Ciebie oferty.</p>
+            <div class="triangle"></div>
+            <div class="logo"><img src="img/logo.png" alt="logo firmy"></div>
+        </header>
+        <section>
+            <form action="" metod='POST'>
+                <div class="first">
+                    <input type="text" name='Imię' id='name' placeholder='Imię' required>
+                    <input type="text" name='Nazwisko' id='surname' placeholder='Nazwisko' required>
+                    <input type="email" name='Email' id='email' placeholder='e-mail' required>
+                    <textarea name="Wiadomość" id="message" placeholder='Treść wiadomości...'></textarea>
+                    <button> Załącz swój projekt ...</button>
+                </div>
+                <div class="second">
+                    <p>Zakres budowy:</p>
+                    <input type="radio" name='building field' value=' raw state'><label for='raw state'>Stan surowy
+                        otwarty</label>
+                    <input type="radio" name='building field' value=' (building) shell'><label
+                        for='(building) shell'>Stan
+                        surowy zamknięty</label>
+                    <input type="radio" name='building field' value='developer state'><label for='developer state'>Stan
+                        deweloperski</label>
+                    <input type="radio" name='building field' value='finishing state"'><label for='finishing state'>Stan
+                        'pod klucz'</label>
+                    <p>Zawartość wyceny:</p>
+                    <input type="checkbox" name='valuation content' value='Labour'><label
+                        for='raw state'>Robocizna</label>
+                    <input type="checkbox" name='valuation content' value='Materials'><label
+                        for='Materials'>Materiały</label>
+                    <input type="checkbox" name='valuation content' value='Machine rental'><label
+                        for='Machine rental'>Robocizna</label>
+                    <input type="checkbox" name='valuation content' value='Estimate'><label
+                        for='Estimate'>Kosztorys</label>
+                    <button>Wyślij</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+</body>
+
+</html>

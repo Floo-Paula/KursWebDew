@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Saira', sans-serif; */
+body {
+    background: rgb(97, 97, 100);
+}
+
+div.wrap {
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('img/bg-koparka.jpg');
+}
+
+header {
+    position: relative;
+    height: 30vh;
+    color: #fff;
+    font-family: 'Saira', sans-serif;
+    background-color: rgba(29, 26, 26, 0.6);
+}
+
+header h1 {
+    margin: 0 50px;
+    padding-top: 120px;
+    border-bottom: 3px solid white;
+    font-size: 50px;
+    text-transform: uppercase;
+    line-height: 50px;
+    letter-spacing: 5px;
+}
+
+header p {
+    margin: 5px 50px;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+header div.triangle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 900px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 150px solid rgb(255, 255, 255);
+
+}
+
+header div.logo img {
+    position: absolute;
+    top: -30px;
+    right: 70px;
+    height: 150px;
+}
+
+section {
+    height: calc(100% - 30vh);
+    background-color: rgba(29, 26, 26, 0.6);
+}
+
+section form {
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: rgba(45, 46, 51, 0.37);
+    height: 80%;
+    width: 70%;
+}
+
+section form div {
+    box-sizing: border-box;
+    flex-basis: 50%;
+    padding: 5%;
+    display: flex;
+    flex-flow: column wrap;
+    color: rgb(230, 225, 225);
+    font-family: 'Saira', sans-serif;
+
+}
+
+section form div.first input,
+section form textarea,
+section div button {
+    flex-basis: 30px;
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgba(45, 46, 51, 0.815);
+    color: white;
+    border: 1px solid #fff;
+}
+
+section form textarea {
+    flex-basis: 40%;
+}
+
+section div button {
+    background-color: rgba(45, 46, 51, 0.815);
+    font-family: 'Saira', sans-serif;
+    transition-duration: 0.2s;
+}
+
+section div.second button {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 15%;
+    background-color: rgba(45, 46, 51, 0.815);
+    font-family: 'Saira', sans-serif;
+    transition-duration: 0.2s;
+}
+
+section div.second {
+    display: block;
+}
+
+section div.second input {
+    width: 20px;
+    margin-right: 5px;
+    vertical-align: -10%;
+}
+
+section div.second label {
+    display: inline-block;
+    width: calc(100% - 25px);
+}
+
+section div.second p {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+section div.second p:last-of-type {
+    margin-top: 20px;
+}
+
+section div.second button:hover,
+section div.first button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+section form div.first input:focus,
+section form textarea:focus {
+    background-color: rgba(27, 27, 27, 0.897);
+    outline: none;
+}
