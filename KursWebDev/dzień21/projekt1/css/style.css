@@ -1,0 +1,27 @@
+header {
+  color: red;
+}
+
+div.small {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+div.big {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+nav {
+  height: 30vh;
+  color: #ee45df;
+}
+
+nav ul {
+  background-color: rebeccapurple;
+}
+/*# sourceMappingURL=style.css.map */
